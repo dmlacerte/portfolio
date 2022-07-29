@@ -1,12 +1,14 @@
 import React from 'react';
+import '../App.css';
+import styles from '../css/Projects.module.css';
 import { projectData } from "../projectData";
 
 function Projects() {
     return (
-        <section id="projects" >
+        <section id="projects" className="pageSection">
             <div>
                 <div>
-                    <h1>
+                    <h1 className="sectionHeader">
                         My Apps
                     </h1>
                     <p>

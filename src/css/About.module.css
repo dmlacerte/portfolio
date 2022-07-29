@@ -1,0 +1,29 @@
+.aboutContainer {
+    display: flex;
+}
+
+.descriptionContainer {
+    width: 80%;
+    padding-right: 5px;
+}
+
+.imgContainer {
+    width: 20%;
+    text-align: center;
+}
+
+.header {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.subHeader {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.myPic {
+    border-radius: 50%;
+}

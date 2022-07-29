@@ -1,30 +1,28 @@
 import React from 'react';
+import '../App.css';
+import styles from '../css/About.module.css';
 
 function About() {
     return (
-        <section id="about">
-            <div>
-                <div>
-                    <h1>
-                        Hi, I'm Deanna.
+        <section id="about" className="pageSection">
+            <div className={styles.aboutContainer}>
+                <div className={styles.descriptionContainer}>
+                    <h1 className={styles.header}>
+                        Hi, I'm Deanna!
                     </h1>
-                    <h2>
+                    <h2 className={styles.subHeader}>
                         Former controls auditor turned full stack developer.
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                        laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-                        Laborum, voluptas natus?
+                    I'm a self-motivated aspiring software developer who enjoys solving challenging, detail-oriented problems. 
+                    My 5+ years of experience as a risk & controls auditor of Fortune 500 companies enables me to approach complicated projects in a thoughtful and organized way, 
+                    and be able to adjust to changes quickly but with directed purpose. 
+                    After completing my Software Engineering Immersive certificate from General Assembly, 
+                    I'm now looking for opportunities as a full stack or front end developer. 
                     </p>
-                    {/* <div>
-                        <a href="#contact">
-                            Work With Me
-                        </a>
-                        <a
-                            href="#projects">
-                            See My Past Work
-                        </a>
-                    </div> */}
+                </div>
+                <div className={styles.imgContainer}>
+                    <img src='/me.jpeg' alt='picture of myself' className={styles.myPic}/>
                 </div>
             </div>
         </section>

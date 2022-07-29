@@ -12,11 +12,11 @@ function App() {
       <header>
         <Navbar /> 
       </header>
-      <main>
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+      <main className='pageContent'>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Contact/>
       </main>
     </div>
   );
