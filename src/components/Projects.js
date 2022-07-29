@@ -11,17 +11,16 @@ function Projects() {
                     <h1 className="sectionHeader">
                         My Apps
                     </h1>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-                        facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-                        fuga dolore.
+                    <p className='sectionSubHeader'>
+                        See below for a sample of my apps, 
+                        along with descriptions, an outline of technologies, and links to live versions and repos. 
                     </p>
                 </div>
                 <div>
                     {projectData.map((project) => (
                         <a
-                            // href={project.link}
-                            // key={project.img}
+                        // href={project.link}
+                        // key={project.img}
                         >
                             <div>
                                 <img

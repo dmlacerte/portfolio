@@ -3,17 +3,17 @@ import styles from '../css/Navbar.module.css';
 
 function Navbar() {
     return (
-        <div>
-            <a href="#about">
+        <div className={styles.navBar}>
+            <a href="#about" className={styles.title}>
                 Deanna Lacerte
             </a>
-            <a href="#skills">
+            <a href="#skills" className={styles.section}>
                 Skills
             </a>
-            <a href="#projects">
-                Past Work
+            <a href="#projects" className={styles.section}>
+                My Apps
             </a>
-            <a href="#contact">
+            <a href="#contact" className={styles.section}>
                 Contact Me
             </a>
         </div>

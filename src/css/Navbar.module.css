@@ -1,0 +1,27 @@
+.navBar {
+    background-color: rgb(20, 20, 24);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.title, .section {
+    text-decoration: none;
+}
+
+.title {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 22px;
+}
+
+.section {
+    color: darkgray;
+    padding-left: 15px;
+}
+
+.section:hover {
+    color: white;
+}

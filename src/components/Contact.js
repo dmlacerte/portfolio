@@ -8,6 +8,9 @@ function Contact() {
             <h1 className='sectionHeader'>
                 Contact Me
             </h1>
+            <p className='sectionSubHeader'>
+                Have any questions or want to work together? Let's get in touch!
+            </p>
         </section>
     )
 }
