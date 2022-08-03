@@ -9,12 +9,12 @@ import Projects from './components/Projects';
 function App() {
   const techStack = {
     languages: ["JavaScript", "HTML", "CSS", "Java", "Python", "SQL"],
-    libraries: ["React", "React Native", "Express.js", "Node.js", "SpingBoot", "Django", "Bootstrap"],
+    libraries: ["React", "React Native", "Express & Node.js", "SpringBoot", "Django", "Bootstrap"],
     databases: ["PostgreSQL", "MongoDB"],
-    other: ["RESTful Routing", "JSON API", "Git"]
+    other: ["RESTful Routing", "JSON API", "GitHub"]
   };
 
-  const [selectedTechStack, setSelectedTechStack] = useState(techStack);
+  const [selectedTechStack, setSelectedTechStack] = useState([]);
   
   return (
     <div className='pageBody'>

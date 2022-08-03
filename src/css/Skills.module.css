@@ -1,0 +1,31 @@
+.iconImgs {
+    background-color: rgb(20, 20, 24);
+    border-radius: 15%;
+    padding: 10px;
+}
+
+.iconImgs:hover {
+    background-color: white;
+}
+
+.categoryRow {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.techRow {
+    width: 75%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.techRowSpace {
+    text-align: center;
+}
+
+.techRowSpace p {
+    margin-top: 5px;
+}
