@@ -7,7 +7,13 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 
 function App() {
-  const techStack = [];
+  const techStack = {
+    languages: ["JavaScript", "HTML", "CSS", "Java", "Python", "SQL"],
+    libraries: ["React", "React Native", "Express.js", "Node.js", "SpingBoot", "Django", "Bootstrap"],
+    databases: ["PostgreSQL", "MongoDB"],
+    other: ["RESTful Routing", "JSON API", "Git"]
+  };
+
   const [selectedTechStack, setSelectedTechStack] = useState(techStack);
   
   return (
@@ -17,8 +23,14 @@ function App() {
       </header>
       <main className='pageContent'>
         <About/>
-        <Skills/>
-        <Projects/>
+        <Skills 
+          techStack={techStack} 
+          selectedTechStack={selectedTechStack}
+          setSelectedTechStack={setSelectedTechStack}
+        />
+        <Projects
+          selectedTechStack={selectedTechStack}
+        />
         <Contact/>
       </main>
     </div>
