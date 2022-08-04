@@ -30,28 +30,42 @@ function Projects() {
                     <h1 className="sectionHeader">
                         My Apps
                     </h1>
-                    <p className='sectionSubHeader'>
-                        See below for a sample of my apps,
-                        along with descriptions, an outline of technologies, and links to live versions and repos.
+                    <p className={styles.subHeader + ' sectionSubHeader'}>
+                        A sample of my apps, along with descriptions, an outline of technologies, and links to live versions and repos.
                     </p>
                 </div>
-                <div>
+                <div className={styles.projectsContainer}>
                     {projectData.map((project, index) => (
-                        <div key={index}>
-                            {isHovered[project.name]
-                                ? null
-                                : <img
-                                    alt="gallery"
-                                    src={project.img}
-                                    onMouseEnter={() => toggle(project.name)}
-                                    onMouseLeave={() => toggle(project.name)}
-                                />
-                            }
+                        <div
+                            key={index}
+                            className={styles.projectContainer}
+                        >
+                            <p
+                                className={styles.projectTitle}
+                            >
+                                {project.name}
+                            </p>
+                            <div
+                                onMouseEnter={() => isHovered[project.name] ? null : toggle(project.name)}
+                                onMouseLeave={() => toggle(project.name)}
+                                className={styles.contentBox}
+                            >
+                                {isHovered[project.name]
+                                    ?
+                                    <div
+                                        className={styles.projectDesc}
+                                    >
+                                        <p>{project.description}</p>
+                                    </div>
+                                    :
+                                    <img
+                                        alt="gallery"
+                                        src={project.img}
+                                        className={styles.projectImg}
+                                    />
+                                }
+                            </div>
                             <div>
-                                <h1>
-                                    {project.name} True
-                                </h1>
-                                <p>{project.description}</p>
                             </div>
                         </div>
                     ))}

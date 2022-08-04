@@ -1,0 +1,45 @@
+.subHeader {
+    margin-top: 50px;
+}
+
+.projectsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.projectContainer {
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contentBox {
+    height: 175px;
+    margin: 10px;
+}
+
+.projectDesc {
+    background-color: rgb(20, 20, 24);
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.projectDesc {
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.projectImg {
+    max-width: 100%;
+    height: auto;
+}
+
+.projectTitle {
+    color: white;
+    margin-bottom: 25px;
+}
