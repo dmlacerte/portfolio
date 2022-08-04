@@ -14,7 +14,7 @@ function About() {
                         Former controls auditor turned full stack developer.
                     </h2>
                     <p>
-                    I'm a self-motivated aspiring software developer who enjoys solving challenging, detail-oriented problems. 
+                    I'm a self-motivated software developer from Boston, MA who enjoys solving challenging, detail-oriented problems. 
                     My 5+ years of experience as a risk & controls auditor of Fortune 500 companies enables me to approach complicated projects in a thoughtful and organized way, 
                     and be able to adjust to changes quickly but with directed purpose. 
                     After completing my Software Engineering Immersive certificate from General Assembly, 

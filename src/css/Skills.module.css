@@ -1,0 +1,60 @@
+.subHeader {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.iconImgs {
+    background-color: rgb(20, 20, 24);
+    border-radius: 15%;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.iconImgsSelected {
+    background-color: white;
+    border-radius: 15%;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.iconImgs:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.multiCategoryRow {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.categoryRow p {
+    color: white;
+    width: 25%;
+    text-align: center;
+}
+
+.categoryTitle {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 25px 0px;
+    font-size: larger;
+}
+
+.techRow {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.techRowSpace {
+    text-align: center;
+    max-width: 100px;
+}
+
+.techRowSpace p {
+    margin-top: 5px;
+}
