@@ -1,6 +1,6 @@
 JS (96): https://iconscout.com/icon/javascript-2752148
-HTML: https://iconscout.com/icon/html5-42
-CSS: https://iconscout.com/icon/css3-8
+HTML: https://iconscout.com/icon/html-2752158
+CSS: https://iconscout.com/icon/css3-11
 Java: https://iconscout.com/icon/java-59
 Python: https://iconscout.com/icon/python-2
 SQL: https://www.flaticon.com/premium-icon/sql_2778893?term=sql&page=1&position=13&page=1&position=13&related_id=2778893#
