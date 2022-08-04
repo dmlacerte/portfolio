@@ -43,3 +43,31 @@
     color: white;
     margin-bottom: 25px;
 }
+
+.projectIcons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.projectIcon {
+    width: 30px;
+}
+
+.projectLinks {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectLinks a {
+    color: darkgray;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.linkDivider {
+    margin: 0px 8px;
+}

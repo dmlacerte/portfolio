@@ -31,7 +31,7 @@ function Projects() {
                         My Apps
                     </h1>
                     <p className={styles.subHeader + ' sectionSubHeader'}>
-                        A sample of my apps, along with descriptions, an outline of technologies, and links to live versions and repos.
+                        A sample of my apps, along with descriptions, an outline of technologies used, and links to live versions and repos.
                     </p>
                 </div>
                 <div className={styles.projectsContainer}>
@@ -59,13 +59,51 @@ function Projects() {
                                     </div>
                                     :
                                     <img
-                                        alt="gallery"
+                                        alt={project.name + ' icon'}
                                         src={project.img}
                                         className={styles.projectImg}
                                     />
                                 }
                             </div>
-                            <div>
+                            <div className={styles.projectIcons}>
+                                {project.techUsed.map((tech, i) => (
+                                    <div 
+                                        key={i}
+                                        className={styles.projectIcon}
+                                    >
+                                        <img
+                                            alt={tech + ' icon'}
+                                            src={'/techIcons/' + tech.toLowerCase().replace(/\s/g, '') + '.png'}
+                                            className={styles.projectImg}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={styles.projectLinks}>
+                                {project.liveLink 
+                                    ? 
+                                    <>
+                                        <a href={project.liveLink} target="_blank">Live App</a> 
+                                        <p className={styles.linkDivider}>|</p>
+                                    </>
+                                    : null
+                                }
+                                {project.githubFrontEnd 
+                                    ? <a href={project.githubFrontEnd} target="_blank">GitHub (Front)</a> 
+                                    : null
+                                }
+                                {project.githubBackEnd 
+                                ? 
+                                <>
+                                    <p className={styles.linkDivider}>|</p>
+                                    <a href={project.githubBackEnd} target="_blank">GitHub (Back)</a> 
+                                </> 
+                                : null
+                                }
+                                {project.githubFullStack 
+                                ? <a href={project.githubFullStack} target="_blank">GitHub (Full)</a> 
+                                : null
+                                }
                             </div>
                         </div>
                     ))}
