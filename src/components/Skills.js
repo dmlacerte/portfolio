@@ -11,11 +11,12 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
         setSelectedTechStack(newStack);
     }
 
-    const techSpace = (tech) => {
+    const techSpace = (tech, index) => {
         return (
             <div
                 onClick={() => updateTechStack(tech)}
                 className={styles.techRowSpace}
+                key={index}
             >
 
                 <img
@@ -36,26 +37,26 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
             <div>
                 <p className={styles.categoryTitle}>Languages</p>
                 <div className={styles.techRow}>
-                    {techStack.languages.map(tech => techSpace(tech))}
+                    {techStack.languages.map((tech, index)=> techSpace(tech, index))}
                 </div>
             </div>
             <div>
                 <p className={styles.categoryTitle}>Libraries and Frameworks</p>
                 <div className={styles.techRow}>
-                    {techStack.libraries.map(tech => techSpace(tech))}
+                    {techStack.libraries.map((tech, index) => techSpace(tech, index))}
                 </div>
             </div>
             <div className={styles.multiCategoryRow}>
                 <div>
                     <p className={styles.categoryTitle}>Databases</p>
                     <div className={styles.techRow}>
-                        {techStack.databases.map(tech => techSpace(tech))}
+                        {techStack.databases.map((tech, index) => techSpace(tech, index))}
                     </div>
                 </div>
                 <div>
                     <p className={styles.categoryTitle}>Other</p>
                     <div className={styles.techRow}>
-                        {techStack.other.map(tech => techSpace(tech))}
+                        {techStack.other.map((tech, index) => techSpace(tech, index))}
                     </div>
                 </div>
             </div>
