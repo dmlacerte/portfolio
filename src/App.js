@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   const techStack = {
@@ -34,6 +35,9 @@ function App() {
         />
         <Contact/>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

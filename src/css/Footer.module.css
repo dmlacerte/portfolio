@@ -1,0 +1,21 @@
+.footerBar {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid darkgray;
+    height: 30px;
+    padding-left: 10px;
+    font-size: smaller;
+}
+
+.footerBar div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footerBar div a {
+    display: flex;
+}
