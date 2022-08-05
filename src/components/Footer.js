@@ -20,6 +20,9 @@ function Footer() {
                     <img src='/socialIcons/githubWhite.png' alt='github logo' />
                 </a>
             </div>
+            <div>
+                <p className={styles.contactInfo}>dmlacerte@gmail.com</p>
+            </div>
         </div>
     )
 }

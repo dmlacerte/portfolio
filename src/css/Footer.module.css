@@ -10,12 +10,18 @@
 }
 
 .footerBar div {
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
 .footerBar div a {
+    cursor: pointer;
     display: flex;
+}
+
+.contactInfo {
+    color: darkgray;
+    font-size: smaller;
+    margin-right: 5px;
 }
