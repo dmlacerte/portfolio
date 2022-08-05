@@ -36,7 +36,7 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
     }
 
     return (
-        <section id="skills" className="pageSection">
+       <section id="skills" className="pageSection">
             <h1 className='sectionHeader'>
                 Skills
             </h1>

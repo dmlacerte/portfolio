@@ -6,6 +6,8 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 
 function App() {
   const techStack = {
@@ -16,29 +18,39 @@ function App() {
   };
 
   const [selectedTechStack, setSelectedTechStack] = useState([]);
-  
+
   return (
+
     <div className='pageBody'>
       <header className='sticky'>
-        <Navbar /> 
+        <Navbar />
       </header>
       <main className='pageContent'>
-        <About/>
-        <Skills 
-          techStack={techStack} 
-          selectedTechStack={selectedTechStack}
-          setSelectedTechStack={setSelectedTechStack}
-        />
-        <Projects
-          selectedTechStack={selectedTechStack}
-          setSelectedTechStack={setSelectedTechStack}
-        />
-        <Contact/>
+        <AnimationOnScroll animateIn="animate__fadeInDown" >
+          <About />
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInDown">
+          <Skills
+            techStack={techStack}
+            selectedTechStack={selectedTechStack}
+            setSelectedTechStack={setSelectedTechStack}
+          />
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInDown">
+          <Projects
+            selectedTechStack={selectedTechStack}
+            setSelectedTechStack={setSelectedTechStack}
+          />
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInDown">
+          <Contact />
+        </AnimationOnScroll>
       </main>
       <footer>
         <Footer />
       </footer>
     </div>
+
   );
 }
 
