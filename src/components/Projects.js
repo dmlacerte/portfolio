@@ -6,23 +6,18 @@ import { projectData } from "../projectData";
 function Projects({ selectedTechStack, setSelectedTechStack }) {
 
     const hovered = {};
-    for (const project of projectData) {
-        hovered[project.name] = false;
-    }
 
     const [isHovered, setIsHovered] = useState(hovered);
     const [filteredProjects, setFilteredProjects] = useState(projectData);
 
-    const toggle = (name) => {
+    const toggleOn = (name) => {
         const newHover = {};
-
-        for (const projects in isHovered) {
-            newHover[projects] = isHovered[projects];
-        }
-
-        newHover[name] = !newHover[name];
-
+        newHover[name] = true;
         setIsHovered(newHover);
+    }
+
+    const toggleOff = () => {
+        setIsHovered({});
     }
 
     const testFilter = (project) => {
@@ -83,8 +78,8 @@ function Projects({ selectedTechStack, setSelectedTechStack }) {
                                 {project.name}
                             </p>
                             <div
-                                onMouseEnter={() => isHovered[project.name] ? null : toggle(project.name)}
-                                onMouseLeave={() => toggle(project.name)}
+                                onMouseEnter={() => toggleOn(project.name)}
+                                onMouseLeave={() => toggleOff()}
                                 className={styles.contentBox}
                             >
                                 {isHovered[project.name]
