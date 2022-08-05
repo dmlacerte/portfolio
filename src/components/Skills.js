@@ -67,7 +67,7 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
                 </div>
             </div>
             <p className={styles.subHeader + ' sectionSubHeader'}>
-                Want to see more of any of the above? Click on each to filter the apps section!
+                Want to see more of any of the above? Click on each skills to filter the apps section.
             </p>
         </section>
     )

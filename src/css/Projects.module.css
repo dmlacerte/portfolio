@@ -2,6 +2,12 @@
     margin-top: 50px;
 }
 
+.resetButton {
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(189, 185, 185);
+}
+
 .projectsContainer {
     display: flex;
     justify-content: center;
