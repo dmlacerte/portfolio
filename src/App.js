@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div className='pageBody'>
-      <header>
+      <header className='sticky'>
         <Navbar /> 
       </header>
       <main className='pageContent'>
