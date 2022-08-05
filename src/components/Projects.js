@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import styles from '../css/Projects.module.css';
 import { projectData } from "../projectData";
 
-function Projects() {
+function Projects({ selectedTechStack, setSelectedTechStack }) {
+    
     const hovered = {};
     for (const project of projectData) {
         hovered[project.name] = false;
     }
 
     const [isHovered, setIsHovered] = useState(hovered);
+    const [filteredProjects, setFilteredProjects] = useState(projectData);
 
     const toggle = (name) => {
         const newHover = {};
@@ -23,6 +25,36 @@ function Projects() {
         setIsHovered(newHover);
     }
 
+    const testFilter = (project) => {
+        for (const i in selectedTechStack) {
+            const projectUsesTech = project.techUsed.includes(selectedTechStack[i]);
+            const projectIncludesOther = project.otherTechUsed.includes(selectedTechStack[i]);
+
+            if (projectUsesTech || projectIncludesOther) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    useEffect(() => {
+        let projects = [];
+        
+        if (selectedTechStack.length > 0) {
+            for (const i in projectData) {
+                if (testFilter(projectData[i])) {
+                    projects.push(projectData[i]);
+                }
+            }
+        } else {
+            projects = [...projectData];
+        }
+
+        setFilteredProjects(projects);
+
+    }, [selectedTechStack])
+
     return (
         <section id="projects" className="pageSection">
             <div>
@@ -35,7 +67,7 @@ function Projects() {
                     </p>
                 </div>
                 <div className={styles.projectsContainer}>
-                    {projectData.map((project, index) => (
+                    {filteredProjects.map((project, index) => (
                         <div
                             key={index}
                             className={styles.projectContainer}
