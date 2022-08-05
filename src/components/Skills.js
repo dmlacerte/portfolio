@@ -5,8 +5,14 @@ import styles from '../css/Skills.module.css';
 function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
 
     const updateTechStack = (tech) => {
-        let newStack = [...selectedTechStack];
-        newStack.push(tech);
+        const newStack = [...selectedTechStack];
+        const techIndex = newStack.findIndex(element => element === tech);
+
+        if (techIndex >= 0) {
+            newStack.splice(techIndex, 1);
+        } else {
+            newStack.push(tech);
+        }
 
         setSelectedTechStack(newStack);
     }
@@ -61,7 +67,7 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
                 </div>
             </div>
             <p className={styles.subHeader + ' sectionSubHeader'}>
-                Want to see more of any of the above? Click on each to filter the apps section!
+                Want to see more of any of the above? Click on each skills to filter the apps section.
             </p>
         </section>
     )

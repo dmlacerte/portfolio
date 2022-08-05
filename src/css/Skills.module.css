@@ -11,6 +11,11 @@
     height: auto;
 }
 
+.iconImgs:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 .iconImgsSelected {
     background-color: white;
     border-radius: 15%;
@@ -19,8 +24,7 @@
     height: auto;
 }
 
-.iconImgs:hover {
-    background-color: white;
+.iconImgsSelected:hover {
     cursor: pointer;
 }
 

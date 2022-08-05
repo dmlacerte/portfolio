@@ -30,6 +30,7 @@ function App() {
         />
         <Projects
           selectedTechStack={selectedTechStack}
+          setSelectedTechStack={setSelectedTechStack}
         />
         <Contact/>
       </main>
