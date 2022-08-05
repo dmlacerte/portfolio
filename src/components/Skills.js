@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 import styles from '../css/Skills.module.css';
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 
 function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
 
@@ -36,39 +38,41 @@ function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
     }
 
     return (
-       <section id="skills" className="pageSection">
-            <h1 className='sectionHeader'>
-                Skills
-            </h1>
-            <div>
-                <p className={styles.categoryTitle}>Languages</p>
-                <div className={styles.techRow}>
-                    {techStack.languages.map((tech, index)=> techSpace(tech, index))}
-                </div>
-            </div>
-            <div>
-                <p className={styles.categoryTitle}>Libraries and Frameworks</p>
-                <div className={styles.techRow}>
-                    {techStack.libraries.map((tech, index) => techSpace(tech, index))}
-                </div>
-            </div>
-            <div className={styles.multiCategoryRow}>
+        <section id="skills" className="pageSection">
+            <AnimationOnScroll animateIn="animate__fadeInDown">
+                <h1 className='sectionHeader'>
+                    Skills
+                </h1>
                 <div>
-                    <p className={styles.categoryTitle}>Databases</p>
+                    <p className={styles.categoryTitle}>Languages</p>
                     <div className={styles.techRow}>
-                        {techStack.databases.map((tech, index) => techSpace(tech, index))}
+                        {techStack.languages.map((tech, index) => techSpace(tech, index))}
                     </div>
                 </div>
                 <div>
-                    <p className={styles.categoryTitle}>Other</p>
+                    <p className={styles.categoryTitle}>Libraries and Frameworks</p>
                     <div className={styles.techRow}>
-                        {techStack.other.map((tech, index) => techSpace(tech, index))}
+                        {techStack.libraries.map((tech, index) => techSpace(tech, index))}
                     </div>
                 </div>
-            </div>
-            <p className={styles.subHeader + ' sectionSubHeader'}>
-                Want to see more of any of the above? Click on each skills to filter the apps section.
-            </p>
+                <div className={styles.multiCategoryRow}>
+                    <div>
+                        <p className={styles.categoryTitle}>Databases</p>
+                        <div className={styles.techRow}>
+                            {techStack.databases.map((tech, index) => techSpace(tech, index))}
+                        </div>
+                    </div>
+                    <div>
+                        <p className={styles.categoryTitle}>Other</p>
+                        <div className={styles.techRow}>
+                            {techStack.other.map((tech, index) => techSpace(tech, index))}
+                        </div>
+                    </div>
+                </div>
+                <p className={styles.subHeader + ' sectionSubHeader'}>
+                    Want to see more of any of the above? Click on each skills to filter the apps section.
+                </p>
+            </AnimationOnScroll>
         </section>
     )
 }

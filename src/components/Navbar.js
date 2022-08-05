@@ -8,6 +8,8 @@ function Navbar() {
 
         const target = ev.target.getAttribute('href');
         const location = document.querySelector(target).offsetTop;
+        console.log(document.querySelector(target).offsetParent);
+        console.log(location);
 
         window.scrollTo({
             left: 0,
