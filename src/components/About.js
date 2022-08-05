@@ -67,6 +67,21 @@ function About() {
                                     <p>GitHub</p>
                                 </div>
                             </a>
+                            <a
+                                href='/Deanna_Lacerte_Resume.pdf'
+                                target="_blank" className={styles.rightLink}
+                                onMouseEnter={() => toggleOn('resume')}
+                                onMouseLeave={() => toggleOff()}
+                                download
+                            >
+                                <div className={styles.linkContainer}>
+                                    {isHovered['resume']
+                                        ? <img src='/socialIcons/resumeBlack.png' alt='resume icon' className={styles.socialIcon} />
+                                        : <img src='/socialIcons/resumeWhite.png' alt='resume icon' className={styles.socialIcon} />
+                                    }
+                                    <p>Resume</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className={styles.imgContainer}>
