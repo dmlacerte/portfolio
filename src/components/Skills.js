@@ -5,8 +5,14 @@ import styles from '../css/Skills.module.css';
 function Skills({ techStack, selectedTechStack, setSelectedTechStack }) {
 
     const updateTechStack = (tech) => {
-        let newStack = [...selectedTechStack];
-        newStack.push(tech);
+        const newStack = [...selectedTechStack];
+        const techIndex = newStack.findIndex(element => element === tech);
+
+        if (techIndex >= 0) {
+            newStack.splice(techIndex, 1);
+        } else {
+            newStack.push(tech);
+        }
 
         setSelectedTechStack(newStack);
     }
