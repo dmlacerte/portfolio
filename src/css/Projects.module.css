@@ -72,6 +72,13 @@
     color: darkgray;
     text-decoration: none;
     font-size: 14px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.projectLinks a:hover {
+    background-color: rgb(70, 69, 69);
+    color: white;
 }
 
 .linkDivider {
