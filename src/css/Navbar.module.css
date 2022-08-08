@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 
-.title, .section {
+.title, .section a {
     text-decoration: none;
 }
 
@@ -18,10 +18,30 @@
 }
 
 .section {
+    display: inline-block;
+}
+
+.section a {
     color: darkgray;
     padding-left: 15px;
 }
 
-.section:hover {
+.section a:hover {
     color: white;
+}
+
+/* Mobile Accessibility */
+@media only screen and (max-width: 600px) { 
+
+    .section {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .title {
+        display: block;
+        text-align: center;
+    }
+
 }

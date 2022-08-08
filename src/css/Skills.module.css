@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 .categoryRow p {
@@ -52,6 +53,7 @@
     display: flex;
     gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .techRowSpace {
@@ -61,4 +63,17 @@
 
 .techRowSpace p {
     margin-top: 5px;
+}
+
+/* Mobile Accessibility */
+@media only screen and (max-width: 600px) { 
+
+    .multiCategoryRow {
+        gap: 0px;
+    }
+
+    .categoryTitle {
+        margin: 50px 0px;
+    }
+
 }
