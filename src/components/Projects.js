@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import styles from '../css/Projects.module.css';
 import { projectData } from "../projectData";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 
 function Projects({ selectedTechStack, setSelectedTechStack }) {
 
@@ -52,7 +54,7 @@ function Projects({ selectedTechStack, setSelectedTechStack }) {
 
     return (
         <section id="projects" className="pageSection">
-            <div>
+            <AnimationOnScroll animateIn="animate__fadeInDown">
                 <div>
                     <h1 className="sectionHeader">
                         My Apps
@@ -60,7 +62,7 @@ function Projects({ selectedTechStack, setSelectedTechStack }) {
                     {selectedTechStack.length > 0
                         ? <p className={styles.subHeader + ' sectionSubHeader'}>
                             {`Currently filtered onto apps that include at least one of the following skills: ${selectedTechStack.join(', ')}. `}
-                            <br/> <br/>
+                            <br /> <br />
                             <span onClick={() => setSelectedTechStack([])} className={styles.resetButton}>Reset</span> to view all applications.
                         </p>
                         : null
@@ -140,7 +142,7 @@ function Projects({ selectedTechStack, setSelectedTechStack }) {
                         </div>
                     ))}
                 </div>
-            </div>
+            </AnimationOnScroll>
         </section>
     )
 }
